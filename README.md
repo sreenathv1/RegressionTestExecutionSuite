@@ -2,9 +2,20 @@
 A utility to execute regression test cases on hbase tables.
 
 
-# Introduction
+# Functionality
 
-This suite is a java component that reads the configured test cases from an input excel file, verifies the expected data and actual data from Hbase and record the details into another excel file. The status and comments of each test case is written to the output file. A Pass/Fail count is also shown at the end of the execution. All the configurable properties are present inside the property file 'regression-test-config.properties'.
+This suite is a java component that reads the configured test cases from an input excel file, verifies the expected data and actual data from HBase and record the details into another excel file. A Pass/Fail count is also shown at the end of the execution. All the configurable properties are present inside the property file 'regression-test-config.properties'.
+
+The column positions in the input excel file can be configured.
+
+The input and output file paths are also configurable.
+
+The Actual Value, Comments and Status of each test case will be updated in the output Excel file as per the test case.
+
+If the particular record is not expected to be present in the hbase table, the expected value should be given as 'NO RECORD'
+
+If the particular column is not expected to be present in the hbase table, the expected value should be given as 'NO COLUMN'
+
 
 # Requirement
 
